@@ -1,0 +1,10 @@
+		Autostart
+
+ Place scripts in this folder in the following 
+ directory. They will not work otherwise.
+
+ "/home/pi/.config/lxsession/LXDE-pi"
+
+ if the directory does not exist, create the 
+ directories with the exact same name in the 
+ same location. It is case sensitive.

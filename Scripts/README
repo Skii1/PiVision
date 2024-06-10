@@ -1,0 +1,37 @@
+
+			      OpenPiVision
+
+This USB contains any essential running files and scripts.
+Scripts are sorted by where/what they are executed by.
+
+Open the instruction or readme file in each folder for 
+more information on each process, and how to implement
+them onto a fresh system.
+
+If you are implementing the OpenVision system on a fresh 
+install of a raspberry pi rather than using the premade ISO,
+copy the root folder of this USB, named "OpenPiVision", and
+copy it to "/home/pi/". The cronjobs are made to call scripts
+in this directory, so please copy them to this directory
+specifically unless you intend to change them later in the 
+crontab
+
+Autostart : This script runs immediatlety upon start up of
+	    the Pi. The script is responsible for opening a 
+	    chromium tab upon startup, in kisok mode.
+	    Kisok mode makes the browser locked, so unable 
+	    to be used and tampered with. If you need to exit,
+	    press "Alt + F4"
+
+Cronscripts : These scripts are run on a periodic period using
+	      a tool called "cronjobs". 
+
+	Drop Cache : Clears the browser cache on a periodic
+		     basis in order to get the updated 
+ 		     webpage information. This occurs every
+		     -15 minutes-
+
+	Auto Refresh : Refreshes the chromium browser tab 
+		       directly after the browser cache is 
+		       refreshed to display updated
+		       browser cache data.

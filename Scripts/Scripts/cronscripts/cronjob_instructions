@@ -1,0 +1,42 @@
+These scripts are run on a scheduler on UNIX/Linux systems 
+called CRON
+
+you can make tasks on CRON, which are called "cronjobs"
+
+if you would like to add, modify or inspect cronjobs, use
+
+"crontab -e"
+
+If a file containing instructions, and no lines of actual
+code, it is a new cronfile, and must have tasks added
+
+to add a cron task, use this template, or follow the 
+instructions in the page opened
+
+"m* h* dom* mon* dow* "command here" "
+
+To define the time you can provide concrete values for
+minute (m), hour (h), day of month (dom), month (mon),
+and day of week (dow) or use '*' in these fields (for 'any').
+
+For example, you can run a backup of all your user accounts
+at 5 a.m every week with:
+
+"0 5 * * 1 tar -zcf /var/backups/home.tgz /home/"
+
+for the OpenVision system, two jobs should be present 
+
+"15 * * * * echo "Dropped Cache" | /home/pi/cronscripts/drop_cache
+
+and
+
+"15 * * * * echo "Refreshed Tab" | /home/pi/cronscripts/refresh
+
+For more detailed documentation about CRON and cronjobs;
+follow the link : https://docs.oracle.com/cd/E12058_01/doc/doc.1014/e12030/cron_expressions.htm 
+
+
+
+
+
+
